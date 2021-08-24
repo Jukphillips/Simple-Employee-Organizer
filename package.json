@@ -1,0 +1,26 @@
+{
+  "name": "10-oop",
+  "version": "1.0.0",
+  "description": "Simple Employee Organizer",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jukphillips/Simple-Employee-Organizer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jukphillips/Simple-Employee-Organizer/issues"
+  },
+  "homepage": "https://github.com/Jukphillips/Simple-Employee-Organizer#readme",
+  "dependencies": {
+    "inquirer": "^8.1.2",
+    "jest": "^27.0.6"
+  }
+}
