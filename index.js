@@ -2,8 +2,6 @@
 const inquirer = require('inquirer')
 // Including file system 
 const fs = require('fs')
-// Including Employee.js into the file
-const Employee = require('./classes/employee')
 // Including Engineer.js into the file
 const Engineer = require('./classes/engineer')
 // Including Intern.js into the file
@@ -40,7 +38,7 @@ function manager()  {
     {
         type: 'input',
         message: "What is the team Manager's Office Number",
-        name: 'officceManager'
+        name: 'officeManager'
     }
 ]).then(function(response) {
     const manager = new Manager(response.nameManager, response.idManager, response.emailManager, response.officeManager)
@@ -62,9 +60,9 @@ function teamChoice() {
         ]
 
     }]).then(function(data) {
-        if(data.choices === "Intern") {
+        if(data.teamChoice === "Intern") {
          intern()
-        } else if(data.choices === "Engineer") {
+        } else if(data.teamChoice === "Engineer") {
           engineer()
         } else {
             renderTeam()
@@ -74,15 +72,62 @@ function teamChoice() {
 }
 
 function intern() {
-
+        inquirer.prompt([{
+        type: 'input',
+        message: "What is the intern's name?",
+        name: "nameIntern"
+    },
+    {
+        type: 'input',
+        message: "What is the intern's id?",
+        name: "idIntern"
+    },
+    {
+        type: 'input',
+        message: "What is the intern's Email?",
+        name: 'emailIntern'
+    },
+    {
+        type: 'input',
+        message: "Where does the intern go to school?",
+        name: 'internSchool'
+    }
+]).then(function(response) {
+    const intern = new Intern(response.nameIntern, response.idIntern, response.emailIntern, response.internSchool)
+    teamMembers.push(intern)
+    teamChoice()
+})
 }
 
 function engineer() {
-
-}
+        inquirer.prompt([{
+        type: 'input',
+        message: "What is the engineer's name?",
+        name: "nameEngineer"
+    },
+    {
+        type: 'input',
+        message: "What is the engineer's id?",
+        name: "idEngineer"
+    },
+    {
+        type: 'input',
+        message: "What is the engineer's Email?",
+        name: 'emailEngineer'
+    },
+    {
+        type: 'input',
+        message: "What is the Engineer's's github username?",
+        name: 'github'
+    }
+]).then(function(response) {
+    const engineer = new Engineer(response.nameManager, response.idManager, response.emailManager, response.github)
+    teamMembers.push(engineer)
+    teamChoice()
+})}
 
 function renderTeam() {
-    
+
 }
 
 manager()

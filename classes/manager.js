@@ -15,4 +15,4 @@ class Manager extends Employee {
     }
 }
 
-mnodule.exports = Manager;
+module.exports = Manager;
