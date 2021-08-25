@@ -43,13 +43,46 @@ function manager()  {
         name: 'officceManager'
     }
 ]).then(function(response) {
-    const manager = new Manager(data.nameManager, data.idManager, data.emailManager, data.officeManager)
+    const manager = new Manager(response.nameManager, response.idManager, response.emailManager, response.officeManager)
     teamMembers.push(manager)
-} )
+    teamChoice()
+})
+}
 
+function teamChoice() {
 
+    inquirer.prompt([{
+        type: 'list',
+        name: 'teamChoice',
+        message: "What team member would you like to add to the team?",
+        choices: [
+            "Intern",
+            "Engineer",
+            "I don't want to add another team member"
+        ]
+
+    }]).then(function(data) {
+        if(data.choices === "Intern") {
+         intern()
+        } else if(data.choices === "Engineer") {
+          engineer()
+        } else {
+            renderTeam()
+        }
+    })
 
 }
 
+function intern() {
+
+}
+
+function engineer() {
+
+}
+
+function renderTeam() {
+    
+}
 
 manager()
