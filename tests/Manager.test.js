@@ -1,1 +1,7 @@
-const manager = require('../classes/manager')
+const Manager = require('../classes/employee.js')
+
+
+
+
+
+module.exports = Manager
