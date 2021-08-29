@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+#Header {
+  text-align: center;
+  background-color: #1ed29d;
+  width: 100%;
+  color: white;
+  padding: 35px;
+}
+
+#teamMembers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 50px;
+}
+
+.Cards {
+  width: 21rem;
+  margin: 30px;
+  box-shadow: 5px 0px 10px;
+}
+
+#managerTop {
+  background-color: Red;
+}
+
+#EngineerTop {
+  background: blue;
+}
+
+#internTop {
+  background: orange;
+}
+
+.memberName {
+  padding: 10px;
+}
+
+.role {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.memberinfo {
+  background: white;
+}
