@@ -39,12 +39,14 @@
 
 .memberName {
   padding: 10px;
+  color: white;
 }
 
 .role {
   display: flex;
   flex-direction: row;
   padding: 10px;
+  color: white;
 }
 
 .memberinfo {
